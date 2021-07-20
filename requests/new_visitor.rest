@@ -1,0 +1,16 @@
+POST http://localhost:3001/api/attendance/
+content-type: application/json
+
+{
+  "id": 212,
+  "title": "Developer",
+  "first_name": "Nasir",
+  "last_name": "Lawal",
+  "email": "nasirlawal001@gmail.com",
+  "phone": "08139332116",
+  "gender": "male",
+  "visit": {
+    "date": "22-02-21",
+    "status": "finished"
+  }
+}

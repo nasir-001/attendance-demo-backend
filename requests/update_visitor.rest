@@ -1,0 +1,15 @@
+PATCH http://localhost:3001/api/attendance/2
+
+{
+  "id": 2,
+  "title": "Developer",
+  "first_name": "Nasir",
+  "last_name": "Lawal",
+  "email": "nasirlawal001@gmail.com",
+  "phone": "08139332116",
+  "gender": "male",
+  "visit": {
+    "date": "22-02-21",
+    "status": "finished"
+  }
+}
