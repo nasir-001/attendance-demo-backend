@@ -18,8 +18,8 @@ let attendance = [
     visit: {
       date: '2021/07/21',
       status: 'finished',
-      admitted_time: '',
-      depart_time: ''
+      admitted_time: '15:36',
+      depart_time: '20:00'
     }
   },
   {
@@ -48,7 +48,7 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
-      admitted_time: '',
+      admitted_time: '15:36',
       depart_time: ''
     }
   },
@@ -63,8 +63,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'finished',
-      admitted_time: '',
-      depart_time: ''
+      admitted_time: '15:36',
+      depart_time: '20:00'
     }
   },
   {
@@ -108,7 +108,7 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
-      admitted_time: '',
+      admitted_time: '15:36',
       depart_time: ''
     }
   }
