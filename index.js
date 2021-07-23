@@ -18,6 +18,8 @@ let attendance = [
     visit: {
       date: '2021/07/21',
       status: 'finished',
+      admitted_time: '',
+      depart_time: ''
     }
   },
   {
@@ -31,6 +33,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: "pending",
+      admitted_time: '',
+      depart_time: ''
     }
   },
   {
@@ -44,6 +48,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
+      admitted_time: '',
+      depart_time: ''
     }
   },
   {
@@ -57,6 +63,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'finished',
+      admitted_time: '',
+      depart_time: ''
     }
   },
   {
@@ -70,6 +78,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'cancelled',
+      admitted_time: '',
+      depart_time: ''
     }
   },
   {
@@ -83,6 +93,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: "pending",
+      admitted_time: '',
+      depart_time: ''
     }
   },
   {
@@ -96,6 +108,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
+      admitted_time: '',
+      depart_time: ''
     }
   }
 ]
@@ -121,9 +135,16 @@ app.post('/api/attendance', (request, response) => {
   response.json(body)
 })
 
-app.get('/api/attendance', (request, response) => {
+app.get('/api/attendance/', (request, response) => {
   response.json(attendance)
 })
+
+// app.get('/api/attendance/:first_name', (request, response) => {
+//   const first_name = request.query.first_name
+//   console.log(request.params.first_name);
+//   const visitors = attendance.find(visitor => visitor.first_name === first_name)
+//   response.json(visitors)
+// })
 
 app.patch('/api/attendance/:id', (request, response) => {
   const id = Number(request.params.id)
@@ -155,6 +176,6 @@ app.get('/api/attendance/:id', (request, response) => {
 })
 
 const PORT = 3001
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`)
 })
