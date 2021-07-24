@@ -18,8 +18,8 @@ let attendance = [
     visit: {
       date: '2021/07/21',
       status: 'finished',
-      admitted_time: '15:36',
-      depart_time: '20:00'
+      admitted_time: '2021-07-24T10:21:23.004Z',
+      depart_time: '2021-07-24T10:26:14.423Z'
     }
   },
   {
@@ -48,7 +48,7 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
-      admitted_time: '15:36',
+      admitted_time: '2021-07-24T10:21:23.004Z',
       depart_time: ''
     }
   },
@@ -63,8 +63,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'finished',
-      admitted_time: '15:36',
-      depart_time: '20:00'
+      admitted_time: '2021-07-24T10:21:23.004Z',
+      depart_time: '2021-07-24T10:26:14.423Z'
     }
   },
   {
@@ -108,7 +108,7 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
-      admitted_time: '15:36',
+      admitted_time: '2021-07-24T10:21:23.004Z',
       depart_time: ''
     }
   }
