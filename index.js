@@ -18,8 +18,8 @@ let attendance = [
     visit: {
       date: '2021/07/21',
       status: 'finished',
-      admitted_time: '2021-07-24T10:21:23.004Z',
-      depart_time: '2021-07-24T10:26:14.423Z'
+      admitted_time: '17:34-pm',
+      depart_time: '17:35-pm'
     }
   },
   {
@@ -48,7 +48,7 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
-      admitted_time: '2021-07-24T10:21:23.004Z',
+      admitted_time: '17:34-pm',
       depart_time: ''
     }
   },
@@ -63,8 +63,8 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'finished',
-      admitted_time: '2021-07-24T10:21:23.004Z',
-      depart_time: '2021-07-24T10:26:14.423Z'
+      admitted_time: '17:34-pm',
+      depart_time: '17:35-pm'
     }
   },
   {
@@ -108,9 +108,48 @@ let attendance = [
     visit: {
       date: '2021/07/20',
       status: 'admitted',
-      admitted_time: '2021-07-24T10:21:23.004Z',
+      admitted_time: '17:34-pm',
       depart_time: ''
     }
+  }
+]
+
+let permissionsList = [
+  {
+    name: "can_create_visitor",
+    description: ""
+  },
+  {
+    name: "can_delete_visitor",
+    description: ""
+  },
+  {
+    name: "can_view_visitor",
+    description: ""
+  },
+  {
+    name: "can_edit_visitor",
+    description: ""
+  },
+  {
+    name: "can_admit_visitor",
+    description: ""
+  },
+  {
+    name: "can_depart_visitor",
+    description: ""
+  },
+  {
+    name: "can_cancel_visitor",
+    description: ""
+  },
+  {
+    name: "can_view-admin-dashboard",
+    description: ""
+  },
+  {
+    name: "can_view-security-dashboard",
+    description: ""
   }
 ]
 
@@ -135,7 +174,21 @@ app.post('/api/attendance', (request, response) => {
   response.json(body)
 })
 
+app.post('/api/permissions', (request, response) => {
+  const body = request.body
+  
+  response.json(body)
+})
+
+app.get('/api/permissions', (request, response) => {
+  response.json(permissionsList)
+})
+
 app.get('/api/attendance/', (request, response) => {
+  response.json(attendance)
+})
+
+app.get('/api/attendance/today', (request, response) => {
   response.json(attendance)
 })
 
