@@ -114,40 +114,107 @@ let attendance = [
   }
 ]
 
+let roleList = [
+  {
+    id: 1,
+    name: "role_num_one",
+    description: ""
+  },
+  {
+    id: 2,
+    name: "role_num_two",
+    description: ""
+  },
+  {
+    id: 3,
+    name: "role_num_three",
+    description: ""
+  },
+  {
+    id: 4,
+    name: "role_num_four",
+    description: ""
+  },
+  {
+    id: 5,
+    name: "role_num_five",
+    description: ""
+  },
+  {
+    id: 6,
+    name: "role_num_six",
+    description: ""
+  },
+  {
+    id: 7,
+    name: "role_num_seven",
+    description: ""
+  },
+  {
+    id: 8,
+    name: "role_num_eight",
+    description: ""
+  },
+  {
+    id: 9,
+    name: "role_num_nine",
+    description: ""
+  },
+  {
+    id: 10,
+    name: "role_num_ten",
+    description: ""
+  },
+  {
+    id: 13,
+    name: "role_num_eleven",
+    description: ""
+  }
+]
+
 let permissionsList = [
   {
+    id: 1,
     name: "can_create_visitor",
     description: ""
   },
   {
+    id: 2,
     name: "can_delete_visitor",
     description: ""
   },
   {
+    id: 3,
     name: "can_view_visitor",
     description: ""
   },
   {
+    id: 4,
     name: "can_edit_visitor",
     description: ""
   },
   {
+    id: 5,
     name: "can_admit_visitor",
     description: ""
   },
   {
+    id: 6,
     name: "can_depart_visitor",
     description: ""
   },
   {
+    id: 7,
     name: "can_cancel_visitor",
     description: ""
   },
   {
+    id: 8,
     name: "can_view-admin-dashboard",
     description: ""
   },
   {
+    id: 9,
     name: "can_view-security-dashboard",
     description: ""
   }
@@ -176,12 +243,24 @@ app.post('/api/attendance', (request, response) => {
 
 app.post('/api/permissions', (request, response) => {
   const body = request.body
+  console.log(body);
   
   response.json(body)
 })
 
 app.get('/api/permissions', (request, response) => {
   response.json(permissionsList)
+})
+
+app.get('/api/roles', (request, response) => {
+  response.json(roleList)
+})
+
+app.delete('/api/permissions/:id', (request, response) => {
+  const id = Number(request.params.id)
+  permissionsList = permissionsList.filter(perm => perm.id !== id)
+
+  response.status(204).end()
 })
 
 app.get('/api/attendance/', (request, response) => {
