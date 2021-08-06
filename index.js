@@ -256,6 +256,20 @@ app.get('/api/roles', (request, response) => {
   response.json(roleList)
 })
 
+app.post('/api/roles', (request, response) => {
+  const body = request.params.body
+  console.log(body);
+
+  response.json(body)
+})
+
+app.delete('/api/roles/:id', (request, response) => {
+  const id = Number(request.params.id)
+  roleList = roleList.filter(perm => perm.id !== id)
+
+  response.status(204).end()
+})
+
 app.delete('/api/permissions/:id', (request, response) => {
   const id = Number(request.params.id)
   permissionsList = permissionsList.filter(perm => perm.id !== id)
