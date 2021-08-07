@@ -118,12 +118,35 @@ let roleList = [
   {
     id: 1,
     name: "role_num_one",
-    description: ""
+    description: "",
+    permissions: [
+      {
+        id: 1,
+        name: 'can_create_visitor',
+        description: ''
+      },
+      {
+        id: 2,
+        name: 'can_delete_visitor',
+        description: ''
+      },
+      {
+        id: 3,
+        name: 'can_view_visitor',
+        description: ''
+      },
+      {
+        id: 4,
+        name: 'can_edit_visitor',
+        description: ''
+      }
+    ]
   },
   {
     id: 2,
     name: "role_num_two",
-    description: ""
+    description: "",
+    permissions: []
   },
   {
     id: 3,
@@ -261,6 +284,26 @@ app.post('/api/roles', (request, response) => {
   console.log(body);
 
   response.json(body)
+})
+
+app.put('/api/roles/:name', (request, response) => {
+  const body = request.params.body
+  console.log(body);
+
+  response.json(body)
+})
+
+app.get('/api/roles/:name', (request, response) => {
+  const name = request.params.name
+  const roleToFind = roleList.find(role => role.name === name)
+  response.json(roleToFind)
+})
+
+app.delete('/api/roles/:name/:perm', (request, response) => {
+  const id = Number(request.params.id)
+  roleList = roleList.filter(perm => perm.id !== id)
+
+  response.status(204).end()
 })
 
 app.delete('/api/roles/:id', (request, response) => {
