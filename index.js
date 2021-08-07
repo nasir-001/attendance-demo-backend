@@ -131,18 +131,47 @@ let groupList = [
             description: ''
           },
           {
+            id: 2,
+            name: 'can_edit_visitor',
+            description: ''
+          },
+          {
+            id: 3,
+            name: 'can_admit_visitor',
+            description: ''
+          },
+          {
+            id: 4,
+            name: 'can_depart_visitor',
+            description: ''
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: 'managing_admin',
+        description: '',
+        permissions: [
+          {
             id: 1,
             name: 'can_create_visitor',
             description: ''
-          },
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: 'monitoring_admin',
+        description: '',
+        permissions: [
           {
             id: 1,
             name: 'can_create_visitor',
             description: ''
           },
           {
-            id: 1,
-            name: 'can_create_visitor',
+            id: 2,
+            name: 'can_edit_visitor',
             description: ''
           }
         ]
@@ -156,12 +185,22 @@ let groupList = [
     roles: [
       {
         id: 2,
-        name: 'permission_admin',
+        name: 'managing_admin',
         description: '',
         permissions: [
           {
             id: 2,
             name: 'can_view_visitor',
+            description: ''
+          },
+          {
+            id: 3,
+            name: 'can_admit_visitor',
+            description: ''
+          },
+          {
+            id: 4,
+            name: 'can_depart_visitor',
             description: ''
           }
         ]
@@ -175,7 +214,7 @@ let groupList = [
     roles: [
       {
         id: 3,
-        name: 'permission_admin',
+        name: 'monitoring_admin',
         description: '',
         permissions: [
           {
@@ -194,7 +233,7 @@ let groupList = [
     roles: [
       {
         id: 4,
-        name: 'permission_admin',
+        name: 'creating_admin',
         description: '',
         permissions: [
           {
@@ -213,7 +252,7 @@ let groupList = [
     roles: [
       {
         id: 5,
-        name: 'permission_admin',
+        name: 'security_man',
         description: '',
         permissions: [
           {
@@ -232,7 +271,7 @@ let groupList = [
     roles: [
       {
         id: 6,
-        name: 'permission_admin',
+        name: 'admitting_admin',
         description: '',
         permissions: [
           {
