@@ -114,6 +114,138 @@ let attendance = [
   }
 ]
 
+let groupList = [
+  {
+    id: 1,
+    name: 'super_admin_group',
+    description: '',
+    roles: [
+      {
+        id: 1,
+        name: 'permission_admin',
+        description: '',
+        permissions: [
+          {
+            id: 1,
+            name: 'can_create_visitor',
+            description: ''
+          },
+          {
+            id: 1,
+            name: 'can_create_visitor',
+            description: ''
+          },
+          {
+            id: 1,
+            name: 'can_create_visitor',
+            description: ''
+          },
+          {
+            id: 1,
+            name: 'can_create_visitor',
+            description: ''
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: 'admin_test_group',
+    description: '',
+    roles: [
+      {
+        id: 2,
+        name: 'permission_admin',
+        description: '',
+        permissions: [
+          {
+            id: 2,
+            name: 'can_view_visitor',
+            description: ''
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: 'visitor_admin_group',
+    description: '',
+    roles: [
+      {
+        id: 3,
+        name: 'permission_admin',
+        description: '',
+        permissions: [
+          {
+            id: 3,
+            name: 'can_admit_visitor',
+            description: ''
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 4,
+    name: 'test_user_group',
+    description: '',
+    roles: [
+      {
+        id: 4,
+        name: 'permission_admin',
+        description: '',
+        permissions: [
+          {
+            id: 4,
+            name: 'can_cancel_visitor',
+            description: ''
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 5,
+    name: 'visitor_manage_group',
+    description: '',
+    roles: [
+      {
+        id: 5,
+        name: 'permission_admin',
+        description: '',
+        permissions: [
+          {
+            id: 5,
+            name: 'can_edit_visitor',
+            description: ''
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 6,
+    name: 'user_group_test',
+    description: '',
+    roles: [
+      {
+        id: 6,
+        name: 'permission_admin',
+        description: '',
+        permissions: [
+          {
+            id: 6,
+            name: 'can_delete_visitor',
+            description: ''
+          }
+        ]
+      }
+    ]
+  }
+]
+
 let roleList = [
   {
     id: 1,
@@ -275,11 +407,30 @@ app.get('/api/permissions', (request, response) => {
   response.json(permissionsList)
 })
 
+app.get('/api/groups', (request, response) => {
+  response.json(groupList)
+})
+
 app.get('/api/roles', (request, response) => {
   response.json(roleList)
 })
 
 app.post('/api/roles', (request, response) => {
+  const body = request.params.body
+  console.log(body);
+
+  response.json(body)
+})
+
+app.post('/api/groups', (request, response) => {
+  const body = request.params.body
+  console.log(body);
+
+  response.json(body)
+})
+
+
+app.put('/api/groups/:name', (request, response) => {
   const body = request.params.body
   console.log(body);
 
@@ -293,15 +444,35 @@ app.put('/api/roles/:name', (request, response) => {
   response.json(body)
 })
 
+app.get('/api/groups/:name', (request, response) => {
+  const name = request.params.name
+  const groupToFind = groupList.find(group => group.name === name)
+  response.json(groupToFind)
+})
+
 app.get('/api/roles/:name', (request, response) => {
   const name = request.params.name
   const roleToFind = roleList.find(role => role.name === name)
   response.json(roleToFind)
 })
 
+app.delete('/api/groups/:name/:role', (request, response) => {
+  const id = Number(request.params.id)
+  groupList = groupList.filter(role => role.id !== id)
+
+  response.status(204).end()
+})
+
 app.delete('/api/roles/:name/:perm', (request, response) => {
   const id = Number(request.params.id)
   roleList = roleList.filter(perm => perm.id !== id)
+
+  response.status(204).end()
+})
+
+app.delete('/api/groups/:id', (request, response) => {
+  const id = Number(request.params.id)
+  groupList = groupList.filter(perm => perm.id !== id)
 
   response.status(204).end()
 })
