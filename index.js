@@ -592,6 +592,20 @@ app.get('/api/users', (request, response) => {
   response.json(userList)
 })
 
+app.put('/api/users/:uuid', (request, response) => {
+  const body = request.params.body
+  console.log(body);
+
+  response.json(body)
+})
+
+app.post('/api/users/:uuid/groups', (request, response) => {
+  const body = request.params.body
+  console.log(body);
+
+  response.json(body)
+})
+
 app.post('/api/users', (request, response) => {
   const body = request.body
   console.log(body);
@@ -600,8 +614,8 @@ app.post('/api/users', (request, response) => {
 })
 
 app.get('/api/users/:uuid', (request, response) => {
-  const name = request.params.name
-  const userToFind = userList.find(group => group.name === name)
+  const id = Number(request.params.uuid)
+  const userToFind = userList.find(user => user.uuid === id)
   response.json(userToFind)
 })
 
