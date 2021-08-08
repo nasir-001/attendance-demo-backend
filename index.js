@@ -414,6 +414,144 @@ let permissionsList = [
   }
 ]
 
+let userList = [
+  {
+    uuid: 1,
+    firstname: 'Johns',
+    lastname: 'Andrew',
+    email: 'johndrew@gmail.com',
+    groups: [
+      {
+        id: 6,
+        name: 'user_group_test',
+        description: '',
+        roles: [
+          {
+            id: 6,
+            name: 'admitting_admin',
+            description: '',
+            permissions: [
+              {
+                id: 6,
+                name: 'can_delete_visitor',
+                description: ''
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    uuid: 2,
+    firstname: 'Khar',
+    lastname: 'Ruxury',
+    email: 'khalury@gmail.com',
+    groups: [
+      {
+        id: 6,
+        name: 'user_group_test',
+        description: '',
+        roles: [
+          {
+            id: 6,
+            name: 'admitting_admin',
+            description: '',
+            permissions: [
+              {
+                id: 6,
+                name: 'can_delete_visitor',
+                description: ''
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    uuid: 3,
+    firstname: 'Katie',
+    lastname: 'Joshua',
+    email: 'marrylang@gmail.com',
+    groups: [
+      {
+        id: 6,
+        name: 'user_group_test',
+        description: '',
+        roles: [
+          {
+            id: 6,
+            name: 'admitting_admin',
+            description: '',
+            permissions: [
+              {
+                id: 6,
+                name: 'can_delete_visitor',
+                description: ''
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    uuid: 4,
+    firstname: 'Marry',
+    lastname: 'Ilan',
+    email: 'marrylan@gmail.com',
+    groups: [
+      {
+        id: 6,
+        name: 'user_group_test',
+        description: '',
+        roles: [
+          {
+            id: 6,
+            name: 'admitting_admin',
+            description: '',
+            permissions: [
+              {
+                id: 6,
+                name: 'can_delete_visitor',
+                description: ''
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    uuid: 5,
+    firstname: 'Mateus',
+    lastname: 'Suza',
+    email: 'suzeeymat@gmail.com',
+    groups: [
+      {
+        id: 6,
+        name: 'user_group_test',
+        description: '',
+        roles: [
+          {
+            id: 6,
+            name: 'admitting_admin',
+            description: '',
+            permissions: [
+              {
+                id: 6,
+                name: 'can_delete_visitor',
+                description: ''
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
 const loginCred = [
   {
     username: "admin1",
@@ -448,6 +586,23 @@ app.get('/api/permissions', (request, response) => {
 
 app.get('/api/groups', (request, response) => {
   response.json(groupList)
+})
+
+app.get('/api/users', (request, response) => {
+  response.json(userList)
+})
+
+app.post('/api/users', (request, response) => {
+  const body = request.body
+  console.log(body);
+  
+  response.json(body)
+})
+
+app.get('/api/users/:uuid', (request, response) => {
+  const name = request.params.name
+  const userToFind = userList.find(group => group.name === name)
+  response.json(userToFind)
 })
 
 app.get('/api/roles', (request, response) => {
