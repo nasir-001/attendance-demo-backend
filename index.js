@@ -422,17 +422,17 @@ let userList = [
     email: 'johndrew@gmail.com',
     groups: [
       {
-        id: 6,
+        id: 1,
         name: 'user_group_test',
         description: '',
         roles: [
           {
-            id: 6,
+            id: 1,
             name: 'admitting_admin',
             description: '',
             permissions: [
               {
-                id: 6,
+                id: 1,
                 name: 'can_delete_visitor',
                 description: ''
               }
@@ -449,17 +449,17 @@ let userList = [
     email: 'khalury@gmail.com',
     groups: [
       {
-        id: 6,
-        name: 'user_group_test',
+        id: 2,
+        name: 'visitor_admin_group',
         description: '',
         roles: [
           {
-            id: 6,
+            id: 2,
             name: 'admitting_admin',
             description: '',
             permissions: [
               {
-                id: 6,
+                id: 2,
                 name: 'can_delete_visitor',
                 description: ''
               }
@@ -476,17 +476,17 @@ let userList = [
     email: 'marrylang@gmail.com',
     groups: [
       {
-        id: 6,
-        name: 'user_group_test',
+        id: 3,
+        name: 'test_user_group',
         description: '',
         roles: [
           {
-            id: 6,
+            id: 3,
             name: 'admitting_admin',
             description: '',
             permissions: [
               {
-                id: 6,
+                id: 3,
                 name: 'can_delete_visitor',
                 description: ''
               }
@@ -503,17 +503,17 @@ let userList = [
     email: 'marrylan@gmail.com',
     groups: [
       {
-        id: 6,
-        name: 'user_group_test',
+        id: 4,
+        name: 'test_visitor_group',
         description: '',
         roles: [
           {
-            id: 6,
+            id: 4,
             name: 'admitting_admin',
             description: '',
             permissions: [
               {
-                id: 6,
+                id: 4,
                 name: 'can_delete_visitor',
                 description: ''
               }
@@ -530,17 +530,17 @@ let userList = [
     email: 'suzeeymat@gmail.com',
     groups: [
       {
-        id: 6,
+        id: 5,
         name: 'user_group_test',
         description: '',
         roles: [
           {
-            id: 6,
+            id: 5,
             name: 'admitting_admin',
             description: '',
             permissions: [
               {
-                id: 6,
+                id: 5,
                 name: 'can_delete_visitor',
                 description: ''
               }
