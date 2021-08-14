@@ -8,115 +8,115 @@ app.use(cors())
 
 let attendance = [
   {
-    id: 1,    
-    title: "Senator",
-    first_name: "Johns",    
-    last_name: "andrew",    
-    email: "johna@gmail.com",
-    phone: "08109342356",
-    gender: "male",    
-    visit: {
-      date: '2021/07/21',
-      status: 'finished',
-      admitted_time: '17:34-pm',
-      depart_time: '17:35-pm'
+    id: 1,
+    date: '2021/07/21',
+    status: 'finished',
+    admitted_time: '17:34-pm',
+    depart_time: '17:35-pm',
+    visitor: {
+      title: "Senator",
+      first_name: "Johns",    
+      last_name: "andrew",    
+      email: "johna@gmail.com",
+      phone: "08109342356",
+      gender: "male"    
     }
   },
   {
-    id: 2,    
-    title: "Mrs",
-    first_name: "Khar",    
-    last_name: "Ruxury",    
-    email: "khalury@gmail.com",
-    phone: "08109342356",
-    gender: "female",    
-    visit: {
-      date: '2021/07/20',
-      status: "pending",
-      admitted_time: '',
-      depart_time: ''
+    id: 2,   
+    date: '2021/07/20',
+    status: "pending",
+    admitted_time: '',
+    depart_time: '',
+    visitor: {
+      title: "Mrs",
+      first_name: "Khar",    
+      last_name: "Ruxury",    
+      email: "khalury@gmail.com",
+      phone: "08109342356",
+      gender: "female"
     }
   },
   {
-    id: 3,    
-    title: "Engineer",
-    first_name: "Katie",    
-    last_name: "Joshua",    
-    email: "marrylang@gmail.com",
-    phone: "08109342356",
-    gender: "female",
-    visit: {
-      date: '2021/07/20',
-      status: 'admitted',
-      admitted_time: '17:34-pm',
-      depart_time: ''
+    id: 3,
+    date: '2021/07/20',
+    status: 'admitted',
+    admitted_time: '17:34-pm',
+    depart_time: '',
+    visitor: {
+      title: "Engineer",
+      first_name: "Katie",    
+      last_name: "Joshua",    
+      email: "marrylang@gmail.com",
+      phone: "08109342356",
+      gender: "female"
     }
   },
   {
-    id: 4,    
-    title: "Mrs",
-    first_name: "Matues",    
-    last_name: "Suza",    
-    email: "suzeeymat@gmail.com",
-    phone: "08109342356",
-    gender: "female",
-    visit: {
-      date: '2021/07/20',
-      status: 'finished',
-      admitted_time: '17:34-pm',
-      depart_time: '17:35-pm'
+    id: 4,
+    date: '2021/07/20',
+    status: 'finished',
+    admitted_time: '17:34-pm',
+    depart_time: '17:35-pm',
+    visitor: {
+      title: "Mrs",
+      first_name: "Matues",    
+      last_name: "Suza",    
+      email: "suzeeymat@gmail.com",
+      phone: "08109342356",
+      gender: "female"
     }
   },
   {
-    id: 5,    
-    title: "Rep",
-    first_name: "Tuan",    
-    last_name: "Keit",    
-    email: "kietuan@gmail.com",
-    phone: "08109342356",
-    gender: "female",
-    visit: {
-      date: '2021/07/20',
-      status: 'cancelled',
-      admitted_time: '',
-      depart_time: ''
+    id: 5,
+    date: '2021/07/20',
+    status: 'cancelled',
+    admitted_time: '',
+    depart_time: '',
+    visitor: {
+      title: "Rep",
+      first_name: "Tuan",    
+      last_name: "Keit",    
+      email: "kietuan@gmail.com",
+      phone: "08109342356",
+      gender: "female"
     }
   },
   {
-    id: 6,    
-    title: "Mrs",
-    first_name: "Marry",    
-    last_name: "Ilan",    
-    email: "marrylan@gmail.com",
-    phone: "08109342356",
-    gender: "female",
-    visit: {
-      date: '2021/07/20',
-      status: "pending",
-      admitted_time: '',
-      depart_time: ''
+    id: 6,
+    date: '2021/07/20',
+    status: "pending",
+    admitted_time: '',
+    depart_time: '',
+    visitor: {
+      title: "Mrs",
+      first_name: "Marry",    
+      last_name: "Ilan",    
+      email: "marrylan@gmail.com",
+      phone: "08109342356",
+      gender: "female"
     }
   },
   {
-    id: 7,    
-    title: "Developer",
-    first_name: "Kiet",    
-    last_name: "Tuan",    
-    email: "kietuan@gmail.com",
-    phone: "08109342356",
-    gender: "female",
-    visit: {
-      date: '2021/07/20',
-      status: 'admitted',
-      admitted_time: '17:34-pm',
-      depart_time: ''
+    id: 7,
+    date: '2021/07/20',
+    status: 'admitted',
+    admitted_time: '17:34-pm',
+    depart_time: '',
+    visitor: {
+      title: "Developer",
+      first_name: "Kiet",    
+      last_name: "Tuan",    
+      email: "kietuan@gmail.com",
+      phone: "08109342356",
+      gender: "female"
     }
   }
 ]
 
 let groupList = [
   {
-    id: 1,
+    uuid: 1,
     name: 'super_admin_group',
     description: '',
     roles: [
@@ -179,7 +179,7 @@ let groupList = [
     ]
   },
   {
-    id: 2,
+    uuid: 2,
     name: 'admin_test_group',
     description: '',
     roles: [
@@ -208,7 +208,7 @@ let groupList = [
     ]
   },
   {
-    id: 3,
+    uuid: 3,
     name: 'visitor_admin_group',
     description: '',
     roles: [
@@ -227,7 +227,7 @@ let groupList = [
     ]
   },
   {
-    id: 4,
+    uuid: 4,
     name: 'test_user_group',
     description: '',
     roles: [
@@ -246,7 +246,7 @@ let groupList = [
     ]
   },
   {
-    id: 5,
+    uuid: 5,
     name: 'visitor_manage_group',
     description: '',
     roles: [
@@ -265,7 +265,7 @@ let groupList = [
     ]
   },
   {
-    id: 6,
+    uuid : 6,
     name: 'user_group_test',
     description: '',
     roles: [
@@ -419,10 +419,11 @@ let userList = [
     uuid: 1,
     firstname: 'Johns',
     lastname: 'Andrew',
+    middlename: '',
     email: 'johndrew@gmail.com',
     groups: [
       {
-        id: 1,
+        uuid: 1,
         name: 'user_group_test',
         description: '',
         roles: [
@@ -446,10 +447,11 @@ let userList = [
     uuid: 2,
     firstname: 'Khar',
     lastname: 'Ruxury',
+    middlename: '',
     email: 'khalury@gmail.com',
     groups: [
       {
-        id: 2,
+        uuid: 2,
         name: 'visitor_admin_group',
         description: '',
         roles: [
@@ -473,10 +475,11 @@ let userList = [
     uuid: 3,
     firstname: 'Katie',
     lastname: 'Joshua',
+    middlename: '',
     email: 'marrylang@gmail.com',
     groups: [
       {
-        id: 3,
+        uuid: 3,
         name: 'test_user_group',
         description: '',
         roles: [
@@ -500,10 +503,11 @@ let userList = [
     uuid: 4,
     firstname: 'Marry',
     lastname: 'Ilan',
+    middlename: '',
     email: 'marrylan@gmail.com',
     groups: [
       {
-        id: 4,
+        uuid: 4,
         name: 'test_visitor_group',
         description: '',
         roles: [
@@ -527,10 +531,11 @@ let userList = [
     uuid: 5,
     firstname: 'Mateus',
     lastname: 'Suza',
+    middlename: '',
     email: 'suzeeymat@gmail.com',
     groups: [
       {
-        id: 5,
+        uuid: 5,
         name: 'user_group_test',
         description: '',
         roles: [
